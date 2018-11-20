@@ -70,3 +70,13 @@ close方法参数为需要关闭的弹窗
 apply方法参数为需要修改的参数，比如皮肤修改，目前仅支持两种皮肤，white、black
 
 其他详细，请参考源码
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+```
