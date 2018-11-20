@@ -1,7 +1,7 @@
 {
   "name": "easy-layer",
   "description": "A Vue.js project",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "author": "陈其文 <jianwang19@sina.com>",
   "license": "MIT",
   "private": false,
@@ -33,13 +33,13 @@
   "main": "dist/easy-layer.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/No2015/vue-layer.git"
+    "url": "git+https://github.com/No2015/easy-layer.git"
   },
   "keywords": [
-    "layer"
+    "layer","vue-layer"
   ],
   "bugs": {
-    "url": "https://github.com/No2015/vue-layer/issues"
+    "url": "https://github.com/No2015/easy-layer/issues"
   },
-  "homepage": "https://github.com/No2015/vue-layer#readme"
+  "homepage": "https://github.com/No2015/easy-layer#readme"
 }
