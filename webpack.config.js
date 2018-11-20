@@ -1,11 +1,16 @@
 var path = require('path')
 var webpack = require('webpack')
 
+
+const NODE_ENV = process.env.NODE_ENV
+
 module.exports = {
-  entry: './src/lib/index.js',
+  entry: NODE_ENV == 'development' ? './src/main.js' : './src/lib/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
+    library: 'easy-layer',
+    libraryTarget: 'umd',
     filename: 'easy-layer.js'
   },
   module: {
