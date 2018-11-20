@@ -57,7 +57,7 @@ this.$layer.alert({
 ```
 辅助功能
 ```
-let layero = this.$layer.msg(content)
+let layero = this.$layer.loading()
 this.$layer.close(layero)
 
 let option = {skin: skin}
