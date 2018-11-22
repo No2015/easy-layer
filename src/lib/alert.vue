@@ -4,7 +4,7 @@
         <div class="layer-alert-wrap">
             <div class="layer-alert-head" @mousedown.prevent.stop="down">
                 <span v-html="title"></span>
-                <a href="javascript:;" class="layer-alert-close" @click="close"></a>
+                <a href="javascript:;" class="layer-alert-close" @mousedown.prevent.stop @click="close"></a>
             </div>
             <div class="layer-alert-cont">
                 <div v-html="content"></div>
@@ -69,14 +69,14 @@ export default {
             this.success(this.layero)
         },
         down(event){
-            if(event.target.classList.contains('layer-alert-close') || event.button != 0){
+            if(event.button != 0){
                 return !1
             }
             let that = this
             that.page.x = event.pageX
             that.page.y = event.pageY            
-            that.layer.x = event.x - event.offsetX - 1
-            that.layer.y = event.y - event.offsetY - 1
+            that.layer.x = event.pageX - event.offsetX - 1
+            that.layer.y = event.pageY - event.offsetY - 1
             that.grip = !0
             document.addEventListener('mousemove', that.move, false)
             document.addEventListener('mouseup', that.up, false)

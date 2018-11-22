@@ -68,7 +68,8 @@ export default {
                     return !1
                 }
                 if(layero){
-                    vms[layero].$el.remove()
+                    //vms[layero].$el.remove()
+                    document.body.removeChild(vms[layero].$el)
                     delete vms[layero]
                 }else{
                     for(let layero in vms){
