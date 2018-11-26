@@ -71,6 +71,14 @@ apply方法参数为需要修改的参数，比如皮肤修改，目前仅支持
 
 其他详细，请参考源码
 
+
+## 1.0.12 新增
+```
+this.$layer.msg(msg,{icon: icon})
+```
+其中，icon的取值范围为{1,7}，分别代表不同的提示icon，默认是0，不带icon
+
+
 ## Build Setup
 
 ``` bash

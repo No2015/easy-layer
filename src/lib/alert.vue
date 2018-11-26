@@ -73,10 +73,11 @@ export default {
                 return !1
             }
             let that = this
-            that.page.x = event.pageX
-            that.page.y = event.pageY            
-            that.layer.x = event.pageX - event.offsetX - 1
-            that.layer.y = event.pageY - event.offsetY - 1
+            that.page.x = event.clientX
+            that.page.y = event.clientY            
+            that.layer.x = event.clientX - event.offsetX - 1
+            that.layer.y = event.clientY - event.offsetY - 1
+            console.log('event',event)
             that.grip = !0
             document.addEventListener('mousemove', that.move, false)
             document.addEventListener('mouseup', that.up, false)
@@ -85,8 +86,8 @@ export default {
             let that = this
             if(that.grip){
                 let $el = that.$el
-                let x = event.pageX - that.page.x + that.layer.x
-                let y = event.pageY - that.page.y + that.layer.y
+                let x = event.clientX - that.page.x + that.layer.x
+                let y = event.clientY - that.page.y + that.layer.y
                 x = x < 0 ? 0 : (x > that.page.w - that.rect.width ? that.page.w - that.rect.width : x)
                 y = y < 0 ? 0 : (y > that.page.h - that.rect.height ? that.page.h - that.rect.height : y)
                 $el.style.left = x + 'px'
