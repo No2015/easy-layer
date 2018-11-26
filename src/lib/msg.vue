@@ -1,5 +1,7 @@
 <template>
-	<div :class="classname" v-html="content"></div>
+    <div :class="classname">
+        <div :class="iconclass" v-html="content"></div>
+    </div>
 </template>
 
 <script>
@@ -30,7 +32,8 @@ export default {
             yes: this.options.yes,
             zIndex: this.options.zIndex,
             maxWidth: this.options.maxWidth,
-            classname: 'layer-dialog layer-msg layer-dialog-anima layer-dialog-' + this.options.skin
+            classname: 'layer-dialog layer-msg layer-dialog-anima layer-dialog-' + this.options.skin,
+            iconclass: this.options.icon ? 'layer-icon layer-icon-'+this.options.icon : ''
         }
     },
     methods: {

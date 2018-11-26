@@ -144,6 +144,16 @@
 .layer-dialog-black .layer-alert-btn{background-color: #00ffff; color: #000;}
 .layer-dialog-black .layer-alert-close{background-image: url(./close-white.png)}
 
+.layer-icon{position: relative; padding-left: 25px;}
+.layer-icon:after{content:''; background: url(./icon.png) no-repeat 0 1px / 140px auto; position: absolute; width: 20px; height: 22px; left: 0px; top: 0px;}
+.layer-icon-1:after{background-position: 1px 1px}
+.layer-icon-2:after{background-position: -19px 1px}
+.layer-icon-3:after{background-position: -40px 1px}
+.layer-icon-4:after{background-position: -60px 1px}
+.layer-icon-5:after{background-position: -80px 1px}
+.layer-icon-6:after{background-position: -100px 1px}
+.layer-icon-7:after{background-position: -120px 1px}
+
 .layer-dialog-anima{
     animation: anima .2s;
 }

@@ -106,7 +106,7 @@ export default {
     },
     methods: {
         msg(){
-            this.$layer.msg('请输入账号')
+            this.$layer.msg('请输入账号',{icon: 1, time: 1e3})
         },
         tips(){
             this.$layer.tips('请输入账号','#name')

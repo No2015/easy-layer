@@ -19,18 +19,20 @@ export default {
                     selector: 'body',
                     tips: 1,
                     zIndex: 999,
-                    mask: !1
+                    mask: !1,
+                    icon: 0
                 }
                 this.options = {...this.options, ...option}
             },
             apply(option){
                 this.options = {...this.options, ...option}
             },
-            msg(content = '无内容', {time = 2000, maxWidth = maxWidth, yes = () => {}} = {}){
+            msg(content = '无内容', {time = 2000, icon = 0, maxWidth = maxWidth, yes = () => {}} = {}){
                 return this.create({
                     type: 'Msg',
                     content: content,
                     time: time,
+                    icon:icon,
                     yes: yes,
                     maxWidth: maxWidth
                 })
